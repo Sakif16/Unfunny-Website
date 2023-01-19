@@ -1,0 +1,435 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Fira Sans', 'sans-serif';
+}
+
+/* Navbar started*/
+
+img{
+    width: 15%;
+    height: 15%;
+}
+.dotted-hr{
+    border: dotted 6px azure;
+    border-bottom:none ;
+    margin: 20px auto;
+    width: 70px;
+}
+h1{
+    font-size: 2.5rem;
+    text-align: center;
+}
+h2{
+    font-size: 1.5rem;
+    text-align: center;
+}
+a{
+    color: azure;
+    font-size: 1.2rem;
+    text-decoration: none;
+}
+p{
+    font-size: 1.2rem;
+    text-align: justify;
+    padding: 15px 0px 0px 0px;
+}
+[class*="col-"]{
+    float: left;
+    padding: 10px;
+}
+/* For Mobile */
+[class*="col-"]{
+    width: 100%;
+}
+.nav-bar{
+    background-color:#f10000;
+    padding: 1% 7% ;
+    text-align: center;
+}
+.nav-bar:after{
+    clear:both;
+    content: '';
+    display: table;
+}
+.nav-bar h1{
+    margin: 0;
+    padding: 10;
+}
+.nav-menu{
+    display: flex;
+    flex-direction: column;
+    text-transform: uppercase;
+}
+.nav-menu a{
+    background-color:#d40000;
+    border-radius: 10px;
+    margin: 7px 0px;
+    padding: 10px;
+}
+.nav-menu a:hover{
+    background-color: black;
+    color: yellow;
+    transition: 0.6s;
+}
+
+/* Navbar ended */
+
+/* profile started */
+
+
+.profile{
+    padding: 130px 10px;
+    text-align: center;
+    position: relative;
+}
+.profile .top-steering{
+    position:absolute;
+    right: 60px;
+    top: 30px;
+    transition: transform 3s;
+}    
+.profile .top-steering:hover{
+    transform: rotate(-170deg);
+}
+.profile-des h1{
+    font-family: 'Satisfy', 'cursive';
+    font-size: 3rem;
+}
+.profile-des p{
+    color: grey;
+    text-align: center;
+    width: 90%;
+    margin: 0px auto 20px auto;
+}
+.profile .bot-steering{
+    position:absolute;
+    left: 60px;
+    bottom: 10px;
+    transition: transform 3s;
+}    
+.profile .bot-steering:hover{
+    transform: rotate(170deg);
+}
+.profile::after{
+    content: '';
+    display: table;
+    clear: both;
+}
+
+/* profile ended */ 
+
+/* about me started */
+
+.about-me{
+    background-color: #f10000;
+    padding: 1% 7%;
+    color: azure;
+    text-align: center;
+    font-family: 'Montserrat', 'sans-serif';
+    margin-top: 16px;
+}
+.about-me::after{
+    content: '';
+    display: table;
+    clear: both;
+}
+.about-me-img img{
+    border: 5px solid black;
+    border-radius: 50%;
+    height: 240px;
+    width: 200px;
+}
+.about-me p{
+    text-align: center;
+    margin-bottom: 13px;
+}
+.about-me a{
+    font-size: 1.2rem;
+}
+.cv-button{
+    background-color: black;
+    color: azure;
+    border: none;
+    border-radius: 12px;
+    padding: 15px;
+    font-size: 1rem;
+    cursor: pointer;
+    text-align: center;
+    margin: 10px;
+    transition: 0.3s;
+}
+.cv-button:hover{
+    background-color: yellow;
+    color: black;
+    box-shadow: 0 4px 8px 5px black;
+}
+
+/* about me ended */
+
+/* professional experience started */
+
+.pro-xp{
+    padding: 1% 0;
+}
+.pro-xp .card{
+    background-color: #d40000;
+    border-radius: 10px;
+    padding: 10px;
+    transition: 0.3s;
+    height: 835px;
+}
+.pro-xp .card:hover{
+    box-shadow: 0 4px 8px 5px black;
+}
+.card-icon{
+    text-align: center;
+
+}
+.card-icon img{
+    margin-top:20px ;
+    width: 100px;
+}
+.card-title h2{
+    background-color: black;
+    color: azure;
+    padding: 10px;
+    text-align: center;
+}
+.card-des{
+    padding: 15px;
+}
+.skill-container .card-des li{
+    margin: 10px;
+}
+.work-xp li{
+    margin: 40px 0;
+}
+.education li{
+    margin: 40px 0;
+}
+.pro-xp::after{
+    clear: both;
+    content: '';
+    display: table;
+}
+.skill-container{
+    padding-right:45px ;
+}
+.skill-container li{
+    list-style-type: none;
+    font-weight: bolder;
+    margin: 30px 10px;
+    position: relative;
+    text-transform: uppercase;
+}
+.skill-container li::before{
+    content: '';
+    position: absolute;
+    background-color: black;
+    top:calc(100% + 5px);
+    width: 100%;
+    height: 10px;
+    left: 0;
+    border-radius: 1000px;
+}
+.skill-container li::after{
+    content: '';
+    position: absolute;
+    background-color: yellow;
+    top:calc(100% + 5px);
+    width: 0%;
+    height: 10px;
+    left: 0;
+    border-radius: 1000px;
+    animation-duration: 5.5s;
+    animation-delay: 0s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+}
+.skill-container li.O::after{
+    animation-name: O;
+}
+@keyframes O {
+    to{
+        width: 90%;
+    }
+}
+.skill-container li.G::after{
+    animation-name: G;
+}
+@keyframes G {
+    to{
+        width: 70%;
+    }
+}
+.skill-container li.D::after{
+    animation-name: D;
+}
+@keyframes D {
+    to{
+        width: 95%;
+    }
+}
+.skill-container li.R::after{
+    animation-name: R;
+}
+@keyframes R {
+    to{
+        width: 75%;
+    }
+}
+.skill-container li.C::after{
+    animation-name: C;
+}
+@keyframes C {
+    to{
+        width: 5%;
+    }
+}
+.skill-container li.B::after{
+    animation-name: B;
+}
+@keyframes B {
+    to{
+        width: 45%;
+    }
+}
+.skill-container li.Coding::after{
+    animation-name: Coding;
+}
+@keyframes Coding {
+    to{
+        width: 40%;
+    }
+}
+.skill-container li.E::after{
+    animation-name: E;
+}
+@keyframes E {
+    to{
+        width: 80%;
+    }
+}
+.skill-container li.P::after{
+    animation-name: P;
+}
+@keyframes P {
+    to{
+        width: 70%;
+    }
+}
+.skill-container li.W::after{
+    animation-name: W;
+}
+@keyframes W {
+    to{
+        width: 95%;
+    }
+}
+.skill-container li.BA::after{
+    animation-name: BA;
+}
+@keyframes BA {
+    to{
+        width: 100%;
+    }
+}
+.skill-container li.LC::after{
+    animation-name: LC;
+}
+@keyframes LC {
+    to{
+        width: 100%;
+    }
+}
+
+/* professional experience ended */
+
+/* achievements and contacts started */
+
+.achievements-contacts{
+    padding: 1% 7%;
+    background-color: black;
+    color: azure;
+}
+.contacts{
+    text-align: center;    
+}
+.contacts input, textarea{
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    resize: none;
+}
+.contacts textarea{
+    margin-top: 13px;
+}
+.contacts button{
+    border: none;
+    border-radius: 12px;
+    background-color: black;
+    color: azure;
+    cursor: pointer;
+    padding: 15px;
+    margin: 10px;
+    width: 100px;
+}
+.contacts button:hover{
+    background-color: yellow;
+    color: black;
+}
+.contact-links{
+    text-align: center;
+}
+.media-buttons .btn{
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 32px;
+    padding: 5px;
+    margin: 10px;
+    width: 50px;
+    background-color: white;
+}
+.btn:hover{
+    background-color: black;
+}
+
+.achievements-contacts::after{
+    content: '';
+    display: table;
+    clear: both;
+}
+
+/* achievements and contacts ended */
+
+/* footer started */
+
+.footer{
+    background-color: rgb(224, 224, 0);
+    padding: 20px;
+    text-align: center;
+    font-size: 0.8rem;
+}
+.footer-menu a{
+    color: black;
+    display: block;
+    margin: 15px 0px;
+    font-size: 1rem;
+}
+.footer-menu a:hover{
+    color: gray;
+}
+
+
+.footer::after{
+    content: '';
+    display: table;
+    clear: both;
+}
+/* footer ended */
